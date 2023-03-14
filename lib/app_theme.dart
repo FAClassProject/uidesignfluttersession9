@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 
 class AppTheme  extends ChangeNotifier{
 
-  bool _isDark = true;
-  ThemeMode get currentTheme => _isDark ? ThemeMode.dark : ThemeMode.light;
+  bool _isDarkTheme = true;
+  ThemeMode get currentTheme => _isDarkTheme ? ThemeMode.dark : ThemeMode.light;
 
-void toggleTheme(){
-  _isDark = !_isDark;
-  notifyListeners();
-}
+  void toggleTheme(){
+    _isDarkTheme = !_isDarkTheme;
+    notifyListeners();
+  }
+
   static ThemeData darkTheme = ThemeData(
     scaffoldBackgroundColor: Colors.black54,
         appBarTheme: AppBarTheme(

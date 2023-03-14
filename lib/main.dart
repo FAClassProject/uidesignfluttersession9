@@ -19,9 +19,14 @@ class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   void initState() {
-   appTheme.addListener(() {
+
+    appTheme.addListener(() {
+      // we didn't add this set method
+      //set state is use to  get the current state of your application at runtime
+      setState(() {});
    });
     super.initState();
+
   }
   @override
   Widget build(BuildContext context) {
@@ -73,7 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
               Container(
                // color: Colors.red,
-                height: MediaQuery.of(context).size.height / 0.25,
+                //height: MediaQuery.of(context).size.height / 0.25,
+                height: 200,
                 width: 200,
                 decoration:BoxDecoration(
                   color: Colors.purpleAccent,
